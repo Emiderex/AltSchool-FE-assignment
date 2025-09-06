@@ -12,10 +12,14 @@
  * @param {number} destination is the stopping number
  * @returns number the sum of the numbers from 1 to destination
  */
+
 export function sumOfNumbersTo(destination) {
     console.log(destination)
-    // write your code here
-    return 0
+    let sum = 0
+    for (let i = 1; i <= destination; i++) {
+        sum = sum + i
+    }
+    return sum
 }
 
 /**
