@@ -159,6 +159,21 @@ export function calculateFactorials(arrayOfNumbers) {
     const result = []
 
     // write your code here
+    for (const num of arrayOfNumbers) {
+        if (num < 0) {
+            result.push(0)
+        }
+        else if (num === 0) {
+            result.push(1)
+        }
+        else {
+            let factorial = 1
+            for (let i = 1; i <= num; i++) {
+                factorial *= i
+            }
+            result.push(factorial)
+        }
+    }
 
     return result
 }
@@ -175,11 +190,28 @@ export function calculateFactorials(arrayOfNumbers) {
  */
 export function findPrimeNumbers(arrayOfNumbers) {
     console.log(arrayOfNumbers)
-    const sum = 0
-    const count = 0
+    let sum = 0
+    let count = 0
     const arrayOfPrimes = []
 
     // write your code here
+    function isPrime(n) {
+        if (n <= 1)
+            return false
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0)
+                return false
+        }
+        return true
+    }
+
+    for (const num of arrayOfNumbers) {
+        if (isPrime(num)) {
+            arrayOfPrimes.push(num)
+            count++
+            sum += num
+        }
+    }
 
     return {
         count,
@@ -201,6 +233,9 @@ export function doubleTheValues(arrayOfNumbers) {
     const result = []
 
     // write your code here
+    for (const num of arrayOfNumbers) {
+        result.push(num * 2)
+    }
 
     return result
 }
