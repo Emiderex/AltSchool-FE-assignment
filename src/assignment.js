@@ -71,6 +71,10 @@ export function celsiusToFahrenheit(arrayOfNumbers) {
     const result = []
 
     // write your code here
+    for (const celsius of arrayOfNumbers) {
+        const fahrenheit = (celsius * 9 / 5) + 32
+        result.push(Math.trunc(fahrenheit))
+    }
 
     return result
 }
