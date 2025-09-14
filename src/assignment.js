@@ -91,11 +91,18 @@ export function celsiusToFahrenheit(arrayOfNumbers) {
 export function oddNumbersWithin(destination) {
     console.log(destination)
     // get the number from 0 to destination
-    const sum = 0
-    const count = 0
+    let sum = 0
+    let count = 0
     const arrayOfOddNumbers = []
 
     // write your code here
+    for (let i = 0; i <= destination; i++) {
+        if (i % 2 !== 0) {
+            count++
+            sum += i
+            arrayOfOddNumbers.push(i)
+        }
+    }
 
     return {
         count,
